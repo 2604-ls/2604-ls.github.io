@@ -1,0 +1,209 @@
+/* Estilos adicionales para el tema oscuro */
+.theme-dark {
+    --color-barra-lateral: rgba(45, 45, 45, 0.902); /* Color de fondo oscuro para la barra de menú */
+    --color-texto: rgb(177, 177, 177); /* Color de texto claro para el tema oscuro */
+    --color-boton: rgba(1, 6, 2, 0); /* Color del botón para el tema oscuro */
+    --color-boton-texto: rgb(255, 255, 255); /* Color del texto del botón para el tema oscuro */
+    --color-boton-texto-hover: rgb(0, 0, 0); /* Color del texto del botón en hover para el tema oscuro */
+    --color-boton-usuario: rgba(12, 12, 12, 0.685); /* Color para el botón perfil */
+    
+}
+
+/* Estilos adicionales para el tema claro (por defecto) */
+.theme-light {
+    --color-barra-lateral: rgb(255, 255, 255); /* Color de fondo claro para la barra de menú */
+    --color-texto: rgb(255, 253, 253); /* Color de texto oscuro para el tema claro */
+    --color-boton:  rgb(255, 255, 255); /* Color del botón para el tema claro */
+    --color-boton-texto: rgb(23, 22, 22); /* Color del texto del botón para el tema claro */
+    --color-boton-texto-hover: rgb(255, 255, 255); /* Color del texto del botón en hover para el tema claro */
+    --color-boton-usuario: rgba(23, 22, 22, 0.578); /* Color para el botón perfil */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(145, 143, 143);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la barra de menú */
+    align-items: center; /* Centra verticalmente la barra de menú */
+}
+
+.barra_menu {
+    height: 100%;
+    width: 260px;
+    padding: 10px 10px;
+    background-color: var(--color-barra-lateral);
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Mantiene la barra de menú fija */
+    top: 0;
+    left: 0;
+}
+
+.btn_logo {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 150px; /* Ajusta el ancho del logo */
+    height: 40px; /* Ajusta la altura del logo */
+    
+}
+
+.btn_logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;  /* Permite que el contenedor ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Separación uniforme entre los elementos del menú */
+    margin-top: 140px; /* Ajusta la distancia desde el logo hasta los botones del menú */
+}
+
+.btn_menu li {
+    width: 100%; /* Asegura que cada <li> ocupe todo el ancho disponible */
+}
+
+.btn {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+    justify-content: flex-start; /* Alinea el contenido al inicio del botón */
+    width: 100%; /* Asegura que el botón ocupe todo el ancho del <li> */
+    padding: 10px 15px; /* Ajusta el padding vertical y horizontal */
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    text-decoration: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.btn svg {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    width: 1.2em; /* Tamaño del ícono */
+    height: 1.2em; /* Tamaño del ícono */
+}
+
+.btn:hover {
+    background-color: #5da967;
+    color: var(--color-boton-texto-hover); /* Cambia el color del texto en hover */
+}
+
+.btn_perfil_usuario {
+    text-align: center;
+    margin-top: auto; /* Envía el botón de perfil al fondo */
+}
+
+.btn_perfil_usuario a {
+    color: var(--color-boton-texto);
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    padding: 10px 15px; /* Ajusta el padding vertical y horizontal */
+    background-color: var(--color-boton-usuario);
+    border-radius: 5px;
+}
+
+/*-------->btn_tema<--------*/
+.btn_tema {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+    justify-content: flex-start; /* Alinea el contenido al inicio del botón */
+    width: 100%; /* Asegura que el botón ocupe todo el ancho del <li> */
+    padding: 10px 15px; /* Ajusta el padding vertical y horizontal */
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    text-decoration: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.btn_tema svg {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    width: 1.2em; /* Tamaño del ícono */
+    height: 1.2em; /* Tamaño del ícono */
+}
+
+.btn_tema:hover {
+    background-color: #5da967;
+    color: var(--color-boton-texto-hover); /* Cambia el color del texto en hover */
+}
+
+
+.btn_salir {
+    margin-top: 40px; 
+}
+
+.linea-horizontal {
+    border: 1;
+    border-top: 1px solid #201c1c; /* Color y grosor de la línea */
+    margin: 7px 0; /* Espacio alrededor de la línea */
+}
+
+/* Estilos del switch cambiar */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-left: 10px; /* Espacio entre el botón de cambiar tema y el interruptor */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px; /* Bordes redondeados del interruptor */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #8fcbaaa1;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+
+
+
+
+
+
+

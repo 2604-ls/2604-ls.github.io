@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.687); /* Color negro con opacidad del 50% */
+    z-index: 0;
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff95;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Cambiado de relative a absolute */
+    bottom: 300px; /* Ajusta el valor para desplazarlo hacia arriba o abajo */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.login-container .form-group {
+    position: relative;
+}
+
+.login-container .form-group .password-eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
